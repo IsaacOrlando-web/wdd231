@@ -1,0 +1,142 @@
+:root{
+    --color1: #8e978d;
+    --color2: #97c4ad;
+    --color3: #bfedbe;
+    --color4: #e6fcd9;
+    --color5: #cdf2d6;
+}
+
+header{
+    background-color: var(--color2);
+    padding: 10px;
+    text-align: center;
+    font-family: Domine, serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centra verticalmente */
+}
+
+header span{
+    padding: 20px;
+    font-size: 1.5rem;
+    color: black;
+    font-weight:bold;
+}
+
+.profile-pic{
+    width: 100px;
+}
+
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+}
+
+#menu::before{
+    content: "☰";
+    position: absolute;
+    top: 10px;
+    right: 2rem;
+}
+
+.navigation{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 760px;
+    background-color: var(--color4);
+    text-align: center;
+    font-size: medium;
+    font-family: Domine, serif;
+}
+
+.navigation li {
+    display: none;
+    padding: 5px;
+}
+
+.navigation a{
+    color: black;
+    text-decoration: none;
+}
+.navigation a:hover{
+    background-color: var(--color5);
+    color: white;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show:before{
+    content: "✖";
+}
+
+h1{
+    font-size: 2rem;
+    text-align: left;
+    color: var(--color1);
+    font-family: Domine, serif;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+section{
+    width: 80%;
+}
+
+section h2{
+    background-color: var(--color2);
+    text-align: center;
+    padding: 15px;
+}
+
+section img{
+    width: 15rem;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid var(--color1);
+    padding: 10px;
+}
+
+.categories-btn{
+    padding: 9px;
+    width: 100px;
+    font-family: DOMINE, serif;
+    font-size: 1rem;
+    background-color: var(--color3);
+    border-style: none;
+}
+
+.categories-btn:hover{
+    background-color: var(--color1);
+    color: white;
+}
+
+footer{
+    background-color: var(--color2);
+    text-align: center;
+    padding: 10px;
+    font-family: Domine, serif;
+    font-size: 1rem;
+    color: black;
+    margin-top: 20px;
+}
