@@ -108,6 +108,7 @@ function displayCourses(filteredCourses){
     let credits = 0;
     const creditsDiv = document.createElement('p');
     creditsDiv.innerHTML = `The total number of course listed below is: ${filteredCourses.reduce((acc, course) => acc + course.credits, 0)}`;
+    creditsDiv.setAttribute('id', 'credits');
     container.appendChild(creditsDiv);
     creditsDiv.style.fontSize = '15px';
     creditsDiv.style.fontStyle = 'italic';
