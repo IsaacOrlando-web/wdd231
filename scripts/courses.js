@@ -122,7 +122,8 @@ function displayCourses(filteredCourses){
             <h3>${course.subject} ${course.number}: ${course.title}</h3>
         `;
         if (course.completed) {
-            courseDiv.style.backgroundColor = '#8e978d';
+            courseDiv.style.backgroundColor = '#97c4ad';
+            courseDiv.style.color = 'black';
         }else{
             courseDiv.style.backgroundColor = '#e6fcd9';
         }

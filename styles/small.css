@@ -78,7 +78,7 @@ header span{
 h1{
     font-size: 2rem;
     text-align: left;
-    color: var(--color1);
+    color: black;
     font-family: Domine, serif;
     align-self: flex-start;
     margin-left: 20px;
