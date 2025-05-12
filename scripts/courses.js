@@ -130,7 +130,7 @@ function displayCourses(filteredCourses){
 
         courseDiv.style.padding = '9px';
         courseDiv.style.margin = '5px';
-        courseDiv.style.borderRadius = '5px';
+        courseDiv.style.borderRadius = '30px';
         courseDiv.style.fontSize = '10px';
         courseDiv.style.textAlign= 'center';
         container.appendChild(courseDiv);
