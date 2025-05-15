@@ -1,0 +1,28 @@
+{
+    "familyName": "Maldonado",
+    "dateMovement": "2023-10-01",
+    "numberMembers": 4,
+    "visitedByBishopric": false,
+    "familyMemberData": [
+        {
+            "name": "Samuel Maldonado",
+            "gender": "Male",
+            "birthDate": "2010-05-15"
+        },
+        {
+            "name": "Joaquin Maldonado",
+            "gender": "Male",
+            "birthDate": "2012-08-20"
+        },
+        {
+            "name": "Benjamin Maldonado",
+            "gender": "Male",
+            "birthDate": "2015-11-25"
+        },
+        {
+            "name": "Isaac Maldonado",
+            "gender": "Male",
+            "birthDate": "2018-03-30"
+        }
+    ]
+}
