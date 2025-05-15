@@ -59,12 +59,18 @@ section {
     background-color: #dedeff;
     width: 20rem;
     border: #0047AB 1px solid;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    box-shadow: 15px 2px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 
 img {
 	width: max-content;
     height: 15rem;
+    margin-top: 10px;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
 }
 
 @media (min-width: 800px) {
