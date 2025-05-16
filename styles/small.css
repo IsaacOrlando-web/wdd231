@@ -52,6 +52,14 @@ header span{
     text-align: center;
     font-size: medium;
     font-family: Domine, serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* ...tus otras reglas... */
+}
+
+.navigation.show {
+    max-height: 500px; /* Ajusta según el contenido */
 }
 
 .navigation li {
