@@ -1,0 +1,46 @@
+@media only screen and (min-width: 38rem){
+    #myButton{
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks li:hover {
+        background-color: var(--color1);
+        color: white;
+    }
+
+    nav{
+        grid-template-rows: 1fr;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+
+    }
+
+    .info-container{
+        display: grid;
+        grid-template-columns: 30rem 1fr 15rem;
+        grid-template-rows: 20rem;
+        gap: 20px;
+    }
+    
+    .bussiness-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    footer li{
+        font-size: 20px;
+    }
+}

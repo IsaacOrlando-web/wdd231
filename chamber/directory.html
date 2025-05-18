@@ -3,13 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coyhaique | Isaac Maldonado</title>
+    <title>Coyhaique Chamber of Commerce | Isaac Maldonado</title>
     <meta name="description" content="A simple HTML document with a title and description.">
     <meta name="author" content="Isaac Maldonado Soto">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:url">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <meta property="og:url" content="https://isaacorlando-web.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coyhaique | Isaac Maldonado">
+    <meta property="og:description" content="A simple HTML document with a title and description.">
+    <meta property="og:image" content="images/favicon.ico">
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <img  src="images/CoyhaiqueLogoWhite.png" alt="logo Coyhaique Chamber of Commerce">
+        <button id="myButton"></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="current-menu-item"><a href="#">Page Two</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="contact.html">Join</a></li>
+            <li><a href="about.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!--Scalable, responsive hero image-->
+        <div class="hero">
+            <picture class="hero-image">
+                <source media="(min-width: 38rem)" srcset="images/header-large.webp">
+                <img src="images/header-small.webp" alt="Coyhaique Centro">
+            </picture>
+            <button id="joinBtn">Join Us</button>
+        </div>
+        <h2>Home</h2>
+        <div class="info-container">
+            <section class="info-cards events-card"><h3>Events</h3></section>
+            <section class="info-cards weather-card">
+                <h3>Current Weather</h3>
+                <img class="weather-img" src="images/weather.svg" alt="weather icon">
+                <div class="weather-info">
+                    <h4 id="location">Location: Coyhaique, Chile</h4>
+                    <p id="description">Mostly cloudy</p>
+                    <p id="temp">Temperature: 8°C</p>
+                    <p id="feelsLike">Feels like: 6°C</p>
+                    <p id="humidity">Humidity: 72%</p>
+                    <p id="wind">Wind: 14 km/h NW</p>
+                </div>
+            </section>
+            <section class="info-cards">
+                <h3>Weather Forecast</h3>
+                <p>Today: <span>90°F</span></p>
+                <p>wednesday: <span>89°F</span></p>
+                <p>Thursday: <span>68°F</span></p>
+            </section>
+        </div>
+        
+        <div class="bussiness-container">
+            <div class="card">
+                <h3>Business Name</h3>
+                <p>Content for card 1.</p>
+                <img src="" alt="">
+                <p><span>Email: </span>info@gmail.com</p>
+                <p><span>Phone: </span>800-555-1234</p>
+                <p><span>URL: </span>mybussiness.com</p>
+            </div>
+            <div class="card">
+                <h3>Business Name</h3>
+                <p>Content for card 1.</p>
+                <img src="" alt="">
+                <p><span>Email: </span>info@gmail.com</p>
+                <p><span>Phone: </span>800-555-1234</p>
+                <p><span>URL: </span>mybussiness.com</p>
+            </div>
+            <div class="card">
+                <h3>Business Name</h3>
+                <p>Content for card 1.</p>
+                <img src="" alt="">
+                <p><span>Email: </span>info@gmail.com</p>
+                <p><span>Phone: </span>800-555-1234</p>
+                <p><span>URL: </span>mybussiness.com</p>
+            </div>
+            
+        </div>
+        
+    </main>
+    <footer>
+        <ul>
+            <p><span class="footer-title">Coyhaique Chamber of Commerce</span></p>
+            <li>Oficina: +56 67 2123 456</li>
+            <li>Móvil/WhatsApp: +56 9 8765 4321</li>
+            <li>contacto@camaracoyhaique.cl</li>
+        </ul>
+        <ul class="social-media">
+            <li>
+                <a href="https://www.facebook.com/camaracoyhaique" target="_blank">
+                    <img class="social-media-img" src="images/facebook.svg" alt="Facebook" width="32" height="32">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/camaracoyhaique/" target="_blank">
+                    <img class="social-media-img" src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/camaracoyhaique/" target="_blank">
+                    <img class="social-media-img" src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>Copyright &copy; 2023 Isaac Maldonado Soto</li>
+            <li>Last Modification: <span id="lastModification"></span></li>
+        </ul>
+        
+    </footer>
 </body>
 </html>
