@@ -118,7 +118,7 @@ nav ul li a{
     transform: translate(-50%, -50%);
 }
 
-.card {
+.card, .member-card {
     background: var(--color3);
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -135,7 +135,7 @@ nav ul li a{
     transform: translateY(-4px) scale(1.02);
 }
 
-.card img {
+.card img, .member-card img {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -145,22 +145,23 @@ nav ul li a{
     box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
 
-.card h3 {
+.card h3, .member-card h3 {
     margin: 0.5rem 0 0.2rem 0;
     font-size: 1.3rem;
     color: var(--color1);
+    text-shadow: 1px 10px 2px black;
     font-weight: bold;
     text-align: center;
 }
 
-.card p {
+.card p, .member-card p {
     margin: 0.2rem 0;
     color: #333;
     font-size: 1rem;
     text-align: center;
 }
 
-.card span {
+.card span, .member-card span {
     font-weight: bold;
     color: var(--color1);
 }
@@ -185,9 +186,11 @@ nav ul li a{
 
 .info-cards h3 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
-    color: var(--color1);
-    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color5);
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bolder;
 }
 
 .info-cards p {
@@ -211,7 +214,7 @@ nav ul li a{
     width: 100%;
 }
 
-.info-container, .bussiness-container{
+.info-container,.members-container{
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -220,12 +223,12 @@ nav ul li a{
 
 h2{
     font-size: 2rem;
-    color: var(--color1);
+    color: black;
     text-align: center;
 }
 
 footer{
-    background-color: var(--color1);
+    background-color: var(--color4);
     padding: 20px;
     display: grid;
 }
@@ -234,7 +237,7 @@ footer li{
     list-style-type: none;
     font-size:1.5rem;
     font-family: 'Times New Roman', Times, serif;
-    color: var(--color3);
+    color: black;
 }
 
 .footer-title{

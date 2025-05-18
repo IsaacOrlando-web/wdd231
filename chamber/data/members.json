@@ -1,79 +1,81 @@
-[
-    {
-        "name": "TechNova Solutions",
-        "address": "123 Innovation Drive, Silicon City, CA 94016",
-        "phone": "(555) 123-4567",
-        "website": "https://www.technova.com",
-        "image": "technova.png",
-        "membershipLevel": 3,
-        "industry": "Technology",
-        "contactPerson": "Alice Johnson",
-        "email": "contact@technova.com"
-    },
-    {
-        "name": "GreenLeaf Organics",
-        "address": "456 Greenway Blvd, Portland, OR 97205",
-        "phone": "(555) 234-5678",
-        "website": "https://www.greenleaforganics.com",
-        "image": "greenleaf.png",
-        "membershipLevel": 2,
-        "industry": "Agriculture",
-        "contactPerson": "Brian Lee",
-        "email": "info@greenleaforganics.com"
-    },
-    {
-        "name": "Cityscape Architects",
-        "address": "789 Skyline Ave, New York, NY 10001",
-        "phone": "(555) 345-6789",
-        "website": "https://www.cityscapearch.com",
-        "image": "cityscape.png",
-        "membershipLevel": 1,
-        "industry": "Architecture",
-        "contactPerson": "Carmen Diaz",
-        "email": "hello@cityscapearch.com"
-    },
-    {
-        "name": "Peak Fitness Center",
-        "address": "321 Mountain Rd, Denver, CO 80202",
-        "phone": "(555) 456-7890",
-        "website": "https://www.peakfitness.com",
-        "image": "peakfitness.png",
-        "membershipLevel": 2,
-        "industry": "Health & Fitness",
-        "contactPerson": "David Kim",
-        "email": "support@peakfitness.com"
-    },
-    {
-        "name": "Sunrise Bakery",
-        "address": "654 Morning St, Austin, TX 73301",
-        "phone": "(555) 567-8901",
-        "website": "https://www.sunrisebakery.com",
-        "image": "sunrisebakery.png",
-        "membershipLevel": 1,
-        "industry": "Food & Beverage",
-        "contactPerson": "Emma Watson",
-        "email": "orders@sunrisebakery.com"
-    },
-    {
-        "name": "BlueWave Marketing",
-        "address": "987 Ocean Ave, Miami, FL 33101",
-        "phone": "(555) 678-9012",
-        "website": "https://www.bluewavemarketing.com",
-        "image": "bluewave.png",
-        "membershipLevel": 3,
-        "industry": "Marketing",
-        "contactPerson": "Frank Miller",
-        "email": "team@bluewavemarketing.com"
-    },
-    {
-        "name": "EcoDrive Transport",
-        "address": "159 Green Rd, Seattle, WA 98101",
-        "phone": "(555) 789-0123",
-        "website": "https://www.ecodrivetransport.com",
-        "image": "ecodrive.png",
-        "membershipLevel": 2,
-        "industry": "Transportation",
-        "contactPerson": "Grace Lin",
-        "email": "service@ecodrivetransport.com"
-    }
-]
+{
+    "members":[
+            {
+            "name": "TechNova Solutions",
+            "address": "123 Innovation Drive, Silicon City, CA 94016",
+            "phone": "(555) 123-4567",
+            "website": "https://www.technova.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCUyyn7PCX7njpTkcXED-AeGVp3DbAYhMqA&s",
+            "membershipLevel": 3,
+            "industry": "Technology",
+            "contactPerson": "Alice Johnson",
+            "email": "contact@technova.com"
+        },
+        {
+            "name": "GreenLeaf Organics",
+            "address": "456 Greenway Blvd, Portland, OR 97205",
+            "phone": "(555) 234-5678",
+            "website": "https://www.greenleaforganics.com",
+            "image": "https://greenleaforganics.com/cdn/shop/files/Final-2_800x.png?v=1703257899",
+            "membershipLevel": 2,
+            "industry": "Agriculture",
+            "contactPerson": "Brian Lee",
+            "email": "info@greenleaforganics.com"
+        },
+        {
+            "name": "Cityscape Architects",
+            "address": "789 Skyline Ave, New York, NY 10001",
+            "phone": "(555) 345-6789",
+            "website": "https://www.cityscapearch.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzt6OYd8R7zpN_f-DkwG-OdS0cVu0P-Wbqfw&s",
+            "membershipLevel": 1,
+            "industry": "Architecture",
+            "contactPerson": "Carmen Diaz",
+            "email": "hello@cityscapearch.com"
+        },
+        {
+            "name": "Peak Fitness Center",
+            "address": "321 Mountain Rd, Denver, CO 80202",
+            "phone": "(555) 456-7890",
+            "website": "https://www.peakfitness.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAg7YCx2BS4ksKVJav0RUx1Y3BDb5VW3C0ZQ&s",
+            "membershipLevel": 2,
+            "industry": "Health & Fitness",
+            "contactPerson": "David Kim",
+            "email": "support@peakfitness.com"
+        },
+        {
+            "name": "Sunrise Bakery",
+            "address": "654 Morning St, Austin, TX 73301",
+            "phone": "(555) 567-8901",
+            "website": "https://www.sunrisebakery.com",
+            "image": "https://www.sunrisebakery.com/wp-content/uploads/2020/10/Sunrise-Bakery-Fondato-Nel-1913-1.png",
+            "membershipLevel": 1,
+            "industry": "Food & Beverage",
+            "contactPerson": "Emma Watson",
+            "email": "orders@sunrisebakery.com"
+        },
+        {
+            "name": "BlueWave Marketing",
+            "address": "987 Ocean Ave, Miami, FL 33101",
+            "phone": "(555) 678-9012",
+            "website": "https://www.bluewavemarketing.com",
+            "image": "https://img.freepik.com/premium-vector/bluewave-media-logo-flowing-wave-design-media-marketing_1256803-15455.jpg",
+            "membershipLevel": 3,
+            "industry": "Marketing",
+            "contactPerson": "Frank Miller",
+            "email": "team@bluewavemarketing.com"
+        },
+        {
+            "name": "EcoDrive Transport",
+            "address": "159 Green Rd, Seattle, WA 98101",
+            "phone": "(555) 789-0123",
+            "website": "https://www.ecodrivetransport.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1g-aYXZmic0DmQjkGIZXVyai8BoFifjPIHw&s",
+            "membershipLevel": 2,
+            "industry": "Transportation",
+            "contactPerson": "Grace Lin",
+            "email": "service@ecodrivetransport.com"
+        }
+    ]
+}
