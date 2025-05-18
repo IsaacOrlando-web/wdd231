@@ -221,7 +221,7 @@ nav ul li a{
 h2{
     font-size: 2rem;
     color: var(--color1);
-    margin: 0;
+    text-align: center;
 }
 
 footer{
