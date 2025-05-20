@@ -24,8 +24,8 @@ function mostrarPokemon(poke){
                     <p class="tipo fighting">FIGHTING</p>
                 </div>
                 <div class="pokemon-stats">
-                    <p class="stat">4m</p>
-                    <p class="stat">60kg</p>
+                    <p class="stat">${poke.height}</p>
+                    <p class="stat">${poke.weight}</p>
                 </div>
             </div>
         </div>
