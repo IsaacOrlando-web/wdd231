@@ -15,10 +15,15 @@ function mostrarPokemon(poke){
 
     const div = document.createElement("div");
     div.classList.add("pokemon");
+
+    const imagen = poke.sprites.front_default 
+        ? poke.sprites.front_default 
+        : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/500px-Pokebola-pokeball-png-0.png";
+
     div.innerHTML = `
         <p class="pokemon-id-back">#025</p>
         <div class="pokemon-imagen">
-            <img src="${poke.sprites.front_default}" alt="Pokemon">
+            <img src="${imagen}" alt="Pokemon" loading="lazy">
         </div>
         <div class="pokemon-info">
             <div class="nombre-contenedor">
@@ -33,7 +38,6 @@ function mostrarPokemon(poke){
                 </div>
             </div>
         </div>
-
     `;
     listaPokemon.appendChild(div);
 }
