@@ -17,46 +17,32 @@ hamburgerElement.addEventListener('click', function() {
 });
 
 async function getData() {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Network response was not ok');
-        const data = await response.json();
-        displayMembers(data.members);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
+    // Espera a que la página esté lista
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Error al cargar los miembros');
+            const data = await response.json();
+            displayMembers(data.members);
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
 }
 getData();
 
 const displayMembers = (members) => {
     members.forEach(member => {
         const card = document.createElement('section');
-        const h2 = document.createElement('h2');
-        const image = document.createElement('img');
-        const phone = document.createElement('p');
-        const address = document.createElement('p');
-        const website = document.createElement('p');
-        const email = document.createElement('p');
-
-        h2.textContent = `${member.name}`;
-        phone.textContent = `Phone: ${member.phone}`;
-        address.textContent = member.address;
-        website.textContent = member.website;
-        email.textContent = member.email;
-        card.setAttribute('class', 'member-card');
-        image.setAttribute('src', member.image);
-        image.setAttribute('alt', `${member.name} - ${member.title}`);
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '340');
-        image.setAttribute('height', '440');
-        card.appendChild(h2);
-        card.appendChild(image);
-        card.appendChild(phone);
-        card.appendChild(address);
-        card.appendChild(website);
-        card.appendChild(email);
+        card.className = 'member-card';
+        card.innerHTML = `
+            <h2>${member.name}</h2>
+            <img src="${member.image}" loading="lazy" width="340" height="440">
+            <p>Phone: ${member.phone}</p>
+            <p>${member.address}</p>
+            <p>${member.website}</p>
+            <p>${member.email}</p>
+        `;
         membersContainer.appendChild(card);
-
-
     });
-}
+};

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem){
+@media only screen and (min-width: 600px){
     #myButton{
         display: none;
     }
@@ -34,6 +34,21 @@
         gap: 20px;
     }
 
+    
+
+    .members-container{
+        margin: 0 auto;
+        max-width: 1200px; /* Ajusta el valor según tu diseño */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: start; /* O center si quieres centrar verticalmente también */
+    }
+}
+
+@media only screen and (min-width: 600px){
+    
     footer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -45,8 +60,12 @@
     }
 
     .members-container{
+        margin: 0 auto;
+        max-width: 1200px; /* Ajusta el valor según tu diseño */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+        justify-content: center;
+        align-items: start; /* O center si quieres centrar verticalmente también */
     }
 }

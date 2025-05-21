@@ -154,6 +154,10 @@ nav ul li a{
     text-align: center;
 }
 
+.members-container{
+    min-height: 600px;
+}
+
 .card p, .member-card p {
     margin: 0.2rem 0;
     color: #333;
@@ -221,6 +225,16 @@ nav ul li a{
     padding: 20px;
 }
 
+.members-container {
+    margin: 0 auto;           /* Centra horizontalmente */
+    max-width: 500px;         /* Ajusta según tu diseño */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;    /* Centra los elementos hijos horizontalmente */
+    align-items: center;      /* Centra los elementos hijos verticalmente */
+}
+
 h1{
     font-size: 2rem;
     color: black;
@@ -238,6 +252,10 @@ footer li{
     font-size:1.5rem;
     font-family: 'Times New Roman', Times, serif;
     color: black;
+}
+
+h2{
+    text-align: center;
 }
 
 .footer-title{
