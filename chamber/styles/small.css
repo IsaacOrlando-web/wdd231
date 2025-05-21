@@ -154,6 +154,11 @@ nav ul li a{
     text-align: center;
 }
 
+.social-media-img{
+    width: 32px; 
+    height: 32px;
+}
+
 .members-container{
     min-height: 600px;
 }
