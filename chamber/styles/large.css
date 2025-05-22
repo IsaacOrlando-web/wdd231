@@ -1,4 +1,27 @@
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 300px){
+    
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    footer li{
+        font-size: 15px;
+    }
+
+    .members-container{
+        margin: 0 auto;
+        max-width: 1200px; /* Ajusta el valor según tu diseño */
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: start; /* O center si quieres centrar verticalmente también */
+    }
+}
+
+@media only screen and (min-width: 800px){
     #myButton{
         display: none;
     }
@@ -40,14 +63,14 @@
         margin: 0 auto;
         max-width: 1200px; /* Ajusta el valor según tu diseño */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
         justify-content: center;
         align-items: start; /* O center si quieres centrar verticalmente también */
     }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 950px){
     
     footer{
         display: grid;
@@ -58,6 +81,7 @@
     footer li{
         font-size: 15px;
     }
+
 
     .members-container{
         margin: 0 auto;
