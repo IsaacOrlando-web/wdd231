@@ -92,20 +92,22 @@ nav li:last-child {
 nav ul li a {
     display: block;
     padding: 1rem 2rem;
-    color: #fff;
+    background: #A13B00; /* Naranja oscuro */
+    color: #fff; 
     font-size: 1.2rem;
     font-family: 'Segoe UI', Arial, sans-serif;
     text-decoration: none;
     letter-spacing: 1px;
     transition: background 0.2s, color 0.2s;
     border-radius: 8px;
+    font-weight: 600;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background: var(--color2);
-    color: var(--color1);
-    outline: none;
+     background: #7a2c00; /* Aún más oscuro en hover */
+    color: #fff;
+    outline: 2px solid #fff;
 }
 
 #myButton {
@@ -134,9 +136,9 @@ nav ul li a:focus {
     height: auto;
 }
 
-#joinBtn{
-    background-color: var(--color2);
-    color: white;
+#joinBtn {
+    background-color: #c13e0c; /* Más oscuro que var(--color1) para mejor contraste */
+    color: #fff;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -149,6 +151,19 @@ nav ul li a:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25); /* Refuerza contraste del texto */
+    letter-spacing: 1px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    outline: 2px solid #fff;
+}
+
+#joinBtn:focus,
+#joinBtn:hover {
+    background-color: #8a2a06; /* Aún más oscuro al interactuar */
+    color: #fff;
+    outline: 2px solid #222;
 }
 
 .card, .member-card {
@@ -261,6 +276,14 @@ nav ul li a:focus {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 20px;
+}
+
+#animateme{
+    margin-bottom: 0;
+}
+
+#animateme li a::before{
+    background-color: #8a2a06;
 }
 
 .members-container {
