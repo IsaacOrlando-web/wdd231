@@ -1,6 +1,6 @@
 {
     "members":[
-            {
+        {
             "name": "TechNova Solutions",
             "address": "123 Innovation Drive, Silicon City, CA 94016",
             "phone": "(555) 123-4567",
@@ -76,6 +76,39 @@
             "industry": "Transportation",
             "contactPerson": "Grace Lin",
             "email": "service@ecodrivetransport.com"
+        },
+        {
+            "name": "Crystal Clear Consulting",
+            "address": "200 Visionary Way, Boston, MA 02118",
+            "phone": "(555) 321-6549",
+            "website": "https://www.crystalclearconsulting.com",
+            "image": "https://static.wixstatic.com/media/ca87e1_ca24bbc271cb413ca862a49e73c4bc08~mv2_d_2501_2501_s_4_2.png/v1/fill/w_280,h_280,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Crystal%20Clear%20Water%201%20Company.png",
+            "membershipLevel": 3,
+            "industry": "Business Consulting",
+            "contactPerson": "Sophia Turner",
+            "email": "info@crystalclearconsulting.com"
+        },
+        {
+            "name": "Summit Financial Group",
+            "address": "88 Finance Plaza, Chicago, IL 60606",
+            "phone": "(555) 432-1987",
+            "website": "https://www.summitfinancial.com",
+            "image": "https://mms.businesswire.com/media/20220922005939/en/1581002/5/SFG_logo_block.jpg?download=1",
+            "membershipLevel": 3,
+            "industry": "Finance",
+            "contactPerson": "Michael Carter",
+            "email": "contact@summitfinancial.com"
+        },
+        {
+            "name": "BrightPath Education",
+            "address": "77 Learning Lane, San Diego, CA 92101",
+            "phone": "(555) 246-1357",
+            "website": "https://www.brightpathedu.com",
+            "image": "https://brightpathkids.com/hs-fs/hubfs/BrightPath_Stacked_TagLine-01-2.png?width=1755&height=1241&name=BrightPath_Stacked_TagLine-01-2.png",
+            "membershipLevel": 3,
+            "industry": "Education",
+            "contactPerson": "Linda Evans",
+            "email": "hello@brightpathedu.com"
         }
     ]
 }

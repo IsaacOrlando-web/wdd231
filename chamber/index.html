@@ -23,7 +23,12 @@
     <meta property="og:title" content="Coyhaique | Isaac Maldonado">
     <meta property="og:description" content="A simple HTML document with a title and description.">
     <meta property="og:image" content="https://isaacorlando-web.github.io/wdd231/chamber/images/coyhaiquelogoqhite.png">
-    <script src="scripts/scripts.js" defer></script>
+
+<!--Scripts-->
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/ramdon_members.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -46,7 +51,7 @@
                 <source media="(min-width: 38rem)" srcset="images/header-large.webp">
                 <img src="images/header-small.webp" alt="Coyhaique Centro">
             </picture>
-            <!--<button id="joinBtn">Join Us</button>-->
+            <button id="joinBtn">Join Us</button>
         </div>
         <h1>Home | Coyhaique Cahmber of Commerce</h1>
         <div class="info-container">
@@ -56,19 +61,26 @@
                 <img class="weather-img" src="images/weather.svg" alt="weather icon">
                 <div class="weather-info">
                     <h4 id="location">Location: Coyhaique, Chile</h4>
-                    <p id="description">Mostly cloudy</p>
-                    <p id="temp">Temperature: 8°C</p>
-                    <p id="feelsLike">Feels like: 6°C</p>
-                    <p id="humidity">Humidity: 72%</p>
-                    <p id="wind">Wind: 14 km/h NW</p>
+                    <p><span id="current-temperature">90°F</span></p>
+                    <p><span id="weather-description"></span></p>
+                    <p>High: <span id="high"></span>°</p>
+                    <p>Low: <span id="low"></span>°</p>
+                    <p>Humidity: <span id="humidity"></span></p>
                 </div>
             </section>
             <section class="info-cards">
                 <h3>Weather Forecast</h3>
-                <p>Today: <span>90°F</span></p>
-                <p>wednesday: <span>89°F</span></p>
-                <p>Thursday: <span>68°F</span></p>
+                
+                <p>Forecast: <span id="forecast"></span></p>
             </section>
+        </div>
+        <!-- Company Spotlights Section -->
+        <h2>Highest Level Members</h2>
+        <section class="spotlights-container">
+            
+                </div>
+            </div>
+        </section>
         </div>
     </main>
     <footer>
