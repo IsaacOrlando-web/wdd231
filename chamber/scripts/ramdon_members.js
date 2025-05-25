@@ -23,7 +23,7 @@ async function getData() {
 //Función que filtre los miembros, solo los que tengan membership 3 y los devuelva en un array random.
 function bestMembersRandom(members) {
     // Filtra los miembros con membershipLevel 3
-    const result = members.filter((member) => member.membershipLevel === 3 );
+    const result = members.filter((member) => member.membershipLevel === 3 || member.membershipLevel === 2);
     // Mezcla el array y toma solo 3 al azar
     const shuffled = result.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 3);
@@ -43,6 +43,12 @@ const displayMembers = (members) => {
             <p>Website: ${member.website}</p>
             <p>Membership Level: ${member.membershipLevel}</p>
         `;
+        if (member.membershipLevel === 3) {
+            card.style.backgroundColor = "	#ffcf40";
+        }else{
+            card.style.backgroundColor = "#C4C4C4";
+        }
+
         membersContainer.appendChild(card);
     });
 };
