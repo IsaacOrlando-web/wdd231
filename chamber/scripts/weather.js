@@ -1,11 +1,12 @@
 const currentTemp = document.querySelector("#current-temperature");
 const descriptionTemp = document.querySelector("#weather-description");
-const forecastTemp = document.querySelector("#forecast");
 const highTemp = document.querySelector("#high");
 const lowHigh = document.querySelector("#low");
 const humidityEl = document.querySelector("#humidity");
 const weatherIcon = document.querySelector(".weather-img");
-
+const tempToday = document.querySelector("#today");
+const tempinOneDay = document.querySelector("#oneDay");
+const tempinTwoDays = document.querySelector("#twoDays");
 
 const urlWeather = "https://api.openweathermap.org/data/3.0/onecall?lat=-45.57&lon=-72.06&exclude=current&appid=499d5fdfcd23c04c4ac39776c9f14f98";
 
@@ -37,6 +38,9 @@ function displayResults(data) {
     weatherIcon.setAttribute('src', iconUrl);
 
     //Forecast 3 days
+    tempToday.textContent = data.daily[0].temp.day;
+    tempinOneDay.textContent = data.daily[1].temp.day;
+    tempinTwoDays.textContent = data.daily[2].temp.day;
     //myGraphic.setAttribute('SRC', iconsrc);
     //myGraphic.setAttribute("alt", data.weather[0].description);
 }
