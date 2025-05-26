@@ -12,6 +12,24 @@ header{
     background-color: var(--color1);
 }
 
+.weather-card {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.member-card,
+.info-cards,
+.spotlight-card {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+}
+
 #myButton{
     background-color: var(--color2);
     color: white;
