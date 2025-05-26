@@ -22,6 +22,40 @@
 }
 
 @media only screen and (min-width: 800px){
+
+    .info-container{
+        display: grid;
+        grid-template-columns: 30rem 1fr;
+        grid-template-rows: 20rem;
+        gap: 20px;
+    }
+    
+    .bussiness-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    
+
+    .members-container{
+        margin: 0 auto;
+        max-width: 1200px; /* Ajusta el valor según tu diseño */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: start; /* O center si quieres centrar verticalmente también */
+    }
+
+    .spotlights-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 950px){
     #myButton{
         display: none;
     }
@@ -76,40 +110,6 @@
         color: var(--color1);
         outline: none;
     }
-
-    .info-container{
-        display: grid;
-        grid-template-columns: 30rem 1fr;
-        grid-template-rows: 20rem;
-        gap: 20px;
-    }
-    
-    .bussiness-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-    }
-
-    
-
-    .members-container{
-        margin: 0 auto;
-        max-width: 1200px; /* Ajusta el valor según tu diseño */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        justify-content: center;
-        align-items: start; /* O center si quieres centrar verticalmente también */
-    }
-
-    .spotlights-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
-
-@media only screen and (min-width: 950px){
     
     footer{
         display: grid;
