@@ -4,11 +4,10 @@ const forecastTemp = document.querySelector("#forecast");
 const highTemp = document.querySelector("#high");
 const lowHigh = document.querySelector("#low");
 const humidityEl = document.querySelector("#humidity");
+const weatherIcon = document.querySelector(".weather-img");
 
-const apiKey = "499d5fdfcd23c04c4ac39776c9f14f98"; // Reemplaza esto
-const lat = -45.57;
-const lon = -72.06;
-const urlWeather = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+const urlWeather = "https://api.openweathermap.org/data/3.0/onecall?lat=-45.57&lon=-72.06&exclude=current&appid=499d5fdfcd23c04c4ac39776c9f14f98";
 
 async function apiFetch(){
     try{
@@ -27,11 +26,17 @@ async function apiFetch(){
 
 apiFetch();
 function displayResults(data) {
-    descriptionTemp.textContent = data.weather[0].description;
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    highTemp.textContent = data.main.temp_max;
-    lowHigh.textContent = data.main.temp_min;
-    humidityEl.textContent = data.main.humidity;
+    //Current Weather(today = index 0)
+    currentTemp.innerHTML = `${data.daily[0].temp.day}&deg;F`;
+    descriptionTemp.textContent = data.daily[0].weather[0].description;
+    highTemp.textContent = data.daily[0].temp.max;
+    lowHigh.textContent = data.daily[0].temp.min;
+    humidityEl.textContent = data.daily[0].humidity;
+    const iconCode = data.daily[0].weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    weatherIcon.setAttribute('src', iconUrl);
+
+    //Forecast 3 days
     //myGraphic.setAttribute('SRC', iconsrc);
     //myGraphic.setAttribute("alt", data.weather[0].description);
 }
