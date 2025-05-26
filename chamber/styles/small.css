@@ -285,8 +285,20 @@ nav ul li a:focus {
 .weather-img{
     margin-top: 2rem;
     width: 9rem;
+    height: 9rem;
     grid-row: 2/3;
     grid-column: 1/2;
+}
+
+.weather-card, .spotlights-container { 
+  min-height: 200px; /* Prevent collapse */ 
+}
+
+.info-cards p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: black;
+    margin: 0.5rem 0;
 }
 
 .info-container,.members-container{
@@ -397,4 +409,14 @@ h2{
 .social-media-img{
     width: 32px; 
     height: 32px;
+}
+
+header img{
+    width: 9em;
+    height: 9em;
+}
+
+main {
+    width: 100%;
+    height: auto;
 }

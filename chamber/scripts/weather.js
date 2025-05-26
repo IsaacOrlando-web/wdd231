@@ -10,19 +10,18 @@ const tempinTwoDays = document.querySelector("#twoDays");
 
 const urlWeather = "https://api.openweathermap.org/data/3.0/onecall?lat=-45.57&lon=-72.06&exclude=current&appid=499d5fdfcd23c04c4ac39776c9f14f98";
 
-async function apiFetch(){
-    try{
-        const response = await fetch(urlWeather);
-        if(response.ok){
-            const data = await response.json();
-            displayResults(data);
-            console.log(data);
-        }else{
-            throw new Error('Network response was not ok');
-        } 
-    }catch(error){
-        console.error('Error xD: ', error);
-    }
+async function apiFetch() {
+  const cacheKey = 'weatherData';
+  const cachedData = localStorage.getItem(cacheKey);
+  if (cachedData) {
+    displayResults(JSON.parse(cachedData));
+    return;
+  }
+  // Fetch fresh data if cache is stale
+  const response = await fetch(urlWeather);
+  const data = await response.json();
+  localStorage.setItem(cacheKey, JSON.stringify(data));
+  displayResults(data);
 }
 
 apiFetch();

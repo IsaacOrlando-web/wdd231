@@ -37,7 +37,7 @@ const displayMembers = (members) => {
         card.className = 'member-card';
         card.innerHTML = `
             <h2>${member.name}</h2>
-            <img src="${member.image}" loading="lazy" width="340" height="440">
+            <img src="${member.image}" width="340" height="440" loading="lazy">
             <p>Phone: ${member.phone}</p>
             <p>Address: ${member.address}</p>
             <p>Website: ${member.website}</p>
