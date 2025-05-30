@@ -6,10 +6,12 @@
 }
 
 header{
+    width: 100%;
     display: grid;
     grid-template-columns: 44px auto 44px;
     align-items: end;
     background-color: var(--color1);
+    min-height: 70px;
 }
 
 .weather-card {
@@ -42,8 +44,8 @@ header{
     margin: 4px 2px;
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 #myButton::before{
@@ -56,11 +58,6 @@ header{
     content: "✖";
     font-size: 30px;
     color: var(--color1);
-}
-
-header img{
-    width: 10em;
-    height: auto;
 }
 
 .logo-image{
@@ -412,13 +409,18 @@ h2{
 }
 
 header img{
-    width: 9em;
-    height: 9em;
+    width: 5em;
+    height: 5em;
 }
 
 main {
     width: 100%;
     height: auto;
+}
+
+.join-main{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 form {
@@ -431,6 +433,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    padding: 1rem 0.5rem;
 }
 
 form label {
@@ -515,4 +518,22 @@ form .membership-options label {
 
 form .membership-options input[type="radio"] {
     accent-color: var(--color1);
+}
+
+.membership-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;   /* Centra horizontalmente los hijos */
+    align-items: center;     /* Centra verticalmente los hijos (si hay altura) */
+    margin: 0 auto;          /* Centra el grid en el contenedor padre */
+    padding: 10px;
+}
+
+.membership-card{
+    background-color: var(--color3);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    width: 300px;
 }
