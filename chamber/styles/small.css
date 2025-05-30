@@ -537,3 +537,17 @@ form .membership-options input[type="radio"] {
     border-radius: 20px;
     width: 300px;
 }
+
+#learn-more-btn {
+    background: var(--color1);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+::backdrop{
+    background-color:#f2bf786c;
+}
