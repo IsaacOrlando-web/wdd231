@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coyhaique Chamber of Commerce | Isaac Maldonado</title>
+    <meta name="description" content="A simple HTML document with a title and description.">
+    <meta name="author" content="Isaac Maldonado Soto">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css"><!-- Carga el CSS MÍNIMO necesario para el inicio (inline) -->
+
+<!-- El resto del CSS, cárgalo ASÍNCRONO -->
+<link rel="stylesheet" href="styles/small.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="styles/large.css" media="(min-width: 600px)" onload="this.media='all'">
+
+    <meta property="og:url" content="https://isaacorlando-web.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coyhaique | Isaac Maldonado">
+    <meta property="og:description" content="A simple HTML document with a title and description.">
+    <meta property="og:image" content="https://isaacorlando-web.github.io/wdd231/chamber/images/coyhaiquelogoqhite.png">
+
+<!--Scripts-->
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/ramdon_members.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img  src="images/coyhaiquelogoqhite.webp" alt="logo Coyhaique Chamber of Commerce">
+        <button id="myButton"></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="current-menu-item"><a href="#">Page Two</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="about.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="GET" action="thankyou.html" class="designOne">
+      <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+        <label>Organizational title <input type="text" name="organization-title" title="the name of your organization's title" required autocomplete="organization-title"></label>
+        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+        <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+        <label>Business/organization's name<input type="text" name="organization-name"  autocomplete="organization" title="the name of your Business"></label>
+        
+
+        <h3>Membership Level</h3>
+        <div class="membership-options">
+    <label><input type="radio" name="ordinance" value="NP" checked> NP Membership</label>
+    <label><input type="radio" name="ordinance" value="Bronze"> Bronze Membership</label>
+    <label><input type="radio" name="ordinance" value="Silver"> Silver Membership</label>
+    <label><input type="radio" name="ordinance" value="Gold"> Gold Membership</label>
+</div>
+
+        <label>Business/organization's description<textarea id="description" name="story" rows="5" cols="33" placeholder="write here..."></textarea></label>
+        <input type="hidden" id="formTimestamp" name="formTimestamp" value="">
+    
+        <input type="submit" value="Join">
+    </form>
+
+    <!--Membership level Information-->
+    <section class="membership-cards-container">
+        <div class="membership-card">
+            <h3>Gold Membership Level</h3>
+            <button id="learn-more-btn">Learn More</button>
+        </div>
+        <div class="membership-card">
+            <h3>Silver Membership Level</h3>
+            <button id="learn-more-btn">Learn More</button>
+        </div>
+        <div class="membership-card">
+            <h3>Bronze Membership Level</h3>
+            <button id="learn-more-btn">Learn More</button>
+        </div>
+        <div class="membership-card">
+            <h3>Non Profit Membership Level</h3>
+            <button id="learn-more-btn">Learn More</button>
+        </div>
+    </section>
+
+    <dialog id="goldDialog">
+        <h2>Gold Membership - Chamber of commerce</h2>
+        <h3>Premium Benefits for Your Business</h3>
+        <p>Upgrade to <span>Gold Membership</span> and unlock exclusive advantages designed to elevate your business growth and networking opportunities.</p>
+        <h3>Key Perks</h3>
+        <ul>
+            <li>✅ Enhanced Visibility – Featured listing in our business directory & spotlight in newsletters</li>
+            <li>✅ Exclusive Networking – VIP access to member-only events & roundtables</li>
+            <li>✅ Marketing Boost – Discounts on sponsorships, ads, and event booths</li>
+            <li>✅ Priority Support – Dedicated account manager & faster assistance</li>
+            <li>✅ Credibility & Trust – Gold Member badge for your website & marketing materials</li>
+        </ul>
+        <h3>Investment</h3>
+        <ul>
+            <li>$500/year</li>
+            <li>$50/month</li>
+        </ul>
+        <button>Close</button>
+    </dialog>
+    
+    <dialog id="silverDialog">
+        <h2>Silver Membership - Chamber of Commerce</h2>
+        <h3>Essential Benefits for Growing Businesses</h3>
+        <p>Join our <span>Silver Membership</span> to access valuable resources that help your business connect and thrive in our community.</p>
+        <h3>Key Perks</h3>
+        <ul>
+            <li>✅ Basic Visibility – Standard listing in our business directory</li>
+            <li>✅ Networking Opportunities – Access to monthly mixers & workshops</li>
+            <li>✅ Marketing Support – Small discounts on event participation</li>
+            <li>✅ Member Support – Priority email response within 24 hours</li>
+            <li>✅ Member Badge – Silver Member designation for your materials</li>
+        </ul>
+        <h3>Investment</h3>
+        <ul>
+            <li>$300/year</li>
+            <li>$30/month</li>
+        </ul>
+        <button onclick="silverDialog.close()">Close</button>
+    </dialog>
+
+    <dialog id="bronzeDialog">
+        <h2>Bronze Membership - Chamber of Commerce</h2>
+        <h3>Foundational Support for New Businesses</h3>
+        <p>Start with our <span>Bronze Membership</span> to establish your presence and begin building valuable connections in the business community.</p>
+        <h3>Key Perks</h3>
+        <ul>
+            <li>✅ Basic Directory Listing – Get listed in our online business directory</li>
+            <li>✅ Networking Access – Invitation to quarterly networking events</li>
+            <li>✅ Chamber Updates – Receive our monthly newsletter and business alerts</li>
+            <li>✅ General Support – Access to our member help center</li>
+            <li>✅ Bronze Member Status – Recognition as a chamber member</li>
+        </ul>
+        <h3>Investment</h3>
+        <ul>
+            <li>$150/year</li>
+            <li>$15/month</li>
+        </ul>
+        <button onclick="bronzeDialog.close()">Close</button>
+    </dialog>
+
+    <dialog id="nonprofitDialog">
+        <h2>Nonprofit Membership - Chamber of Commerce</h2>
+        <h3>Specialized Support for Mission-Driven Organizations</h3>
+        <p>Our <span>Nonprofit Membership</span> provides tailored benefits to help your organization grow its impact while connecting with business partners.</p>
+        <h3>Key Perks</h3>
+        <ul>
+            <li>✅ Discounted Rate – Special nonprofit pricing</li>
+            <li>✅ Nonprofit Directory – Featured in our dedicated nonprofit section</li>
+            <li>✅ Cause Marketing – Opportunities to connect with corporate sponsors</li>
+            <li>✅ Capacity Building – Access to nonprofit-focused workshops</li>
+            <li>✅ Volunteer Matching – Connect with skilled business volunteers</li>
+            <li>✅ Advocacy Support – Voice in policy matters affecting nonprofits</li>
+        </ul>
+        <h3>Investment</h3>
+        <ul>
+            <li>$200/year (50% off standard Silver membership)</li>
+            <li>Additional program sponsorship opportunities available</li>
+        </ul>
+        <button onclick="nonprofitDialog.close()">Close</button>
+    </dialog>
+
+    </main>
+    <footer>
+        <ul>
+            <li><span class="footer-title">Coyhaique Chamber of Commerce</span></li>
+            <li>Oficina: +56 67 2123 456</li>
+            <li>Móvil/WhatsApp: +56 9 8765 4321</li>
+            <li>contacto@camaracoyhaique.cl</li>
+        </ul>
+        <ul class="social-media">
+            <li>
+                <a href="https://www.facebook.com/camaracoyhaique" target="_blank">
+                    <img class="social-media-img" src="images/facebook.svg" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/camaracoyhaique/" target="_blank">
+                    <img class="social-media-img" src="images/instagram.svg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/camaracoyhaique/" target="_blank">
+                    <img class="social-media-img" src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>Copyright &copy; <span id="CurrentYear"></span> Isaac Maldonado Soto</li>
+            <li>Last Modification: <span id="lastModification"></span></li>
+        </ul>
+        
+    </footer>
+</body>
+<script src="scripts/script.js" defer></script>
+</html>
