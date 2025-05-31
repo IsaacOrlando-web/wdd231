@@ -38,50 +38,54 @@
             <li><a href="about.html">Discover</a></li>
         </ul>
     </nav>
-    <h1>Join the Coyhaique Chamber of Commerce</h1>
-    <main class="join-main">
-        <form method="GET" action="thankyou.html" class="designOne">
-        <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-        <label>Organizational title <input type="text" name="organization-title" title="the name of your organization's title" required autocomplete="organization-title"></label>
-        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-        <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-        <label>Business/organization's name<input type="text" name="organization-name"  autocomplete="organization" title="the name of your Business"></label>
+    
+    <main>
+        <h1>Join the Coyhaique Chamber of Commerce</h1>
+        <div class="join-main">
+            <form method="GET" action="thankyou.html" class="designOne">
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Organizational title <input type="text" name="organization-title" title="the name of your organization's title" required autocomplete="organization-title"></label>
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Business/organization's name<input type="text" name="organization-name"  autocomplete="organization" title="the name of your Business"></label>
         
 
-        <h3>Membership Level</h3>
-        <div class="membership-options">
-    <label><input type="radio" name="ordinance" value="NP" checked> NP Membership</label>
-    <label><input type="radio" name="ordinance" value="Bronze"> Bronze Membership</label>
-    <label><input type="radio" name="ordinance" value="Silver"> Silver Membership</label>
-    <label><input type="radio" name="ordinance" value="Gold"> Gold Membership</label>
-</div>
+                <h3>Membership Level</h3>
+                <div class="membership-options">
+                    <label><input type="radio" name="ordinance" value="NP" checked> NP Membership</label>
+                    <label><input type="radio" name="ordinance" value="Bronze"> Bronze Membership</label>
+                    <label><input type="radio" name="ordinance" value="Silver"> Silver Membership</label>
+                    <label><input type="radio" name="ordinance" value="Gold"> Gold Membership</label>
+                </div>
 
-        <label>Business/organization's description<textarea id="description" name="story" rows="5" cols="33" placeholder="write here..."></textarea></label>
-        <input type="hidden" id="formTimestamp" name="formTimestamp" value="">
+                <label>Business/organization's description<textarea id="description" name="story" rows="5" cols="33" placeholder="write here..."></textarea></label>
+                <input type="hidden" id="formTimestamp" name="formTimestamp" value="">
     
-        <input type="submit" value="Join">
-    </form>
+                <input type="submit" value="Join">
+            </form>
 
     <!--Membership level Information-->
-    <section class="membership-cards-container">
-        <div class="membership-card" id="gold">
-            <h3>Gold Membership Level</h3>
-            <button class="learn-more-btn">Learn More</button>
+            <section class="membership-cards-container">
+                <div class="membership-card" id="gold">
+                    <h3>Gold Membership Level</h3>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="membership-card" id="silver">
+                    <h3>Silver Membership Level</h3>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="membership-card" id="bronze">
+                    <h3>Bronze Membership Level</h3>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="membership-card" id="non">
+                    <h3>Non Profit Membership Level</h3>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </section>
         </div>
-        <div class="membership-card" id="silver">
-            <h3>Silver Membership Level</h3>
-            <button class="learn-more-btn">Learn More</button>
-        </div>
-        <div class="membership-card" id="bronze">
-            <h3>Bronze Membership Level</h3>
-            <button class="learn-more-btn">Learn More</button>
-        </div>
-        <div class="membership-card" id="non">
-            <h3>Non Profit Membership Level</h3>
-            <button class="learn-more-btn">Learn More</button>
-        </div>
-    </section>
+        
 
     <dialog id="goldDialog">
         <h2>Gold Membership - Chamber of commerce</h2>
