@@ -14,6 +14,12 @@ const silverClose = document.querySelector("#silverDialog button");
 const bronzeClose = document.querySelector("#bronzeDialog button");
 const nonProfitClose = document.querySelector("#nonprofitDialog button")
 
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampInput = document.getElementById("formTimestamp");
+    if (timestampInput) {
+        timestampInput.value = new Date().toISOString();
+    }
+});
 //open and close dialog functions
 //gold
 goldBtn.addEventListener("click", () => dialogGold.showModal());

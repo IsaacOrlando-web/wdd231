@@ -535,8 +535,24 @@ form .membership-options input[type="radio"] {
     padding: 10px;
     text-align: center;
     border-radius: 20px;
-    width: 300px;
+    animation-name: bigger;
+    animation-duration: 2s;
 }
+
+@keyframes bigger {
+    from{
+        width: 40px;
+    }to{
+        width: 100%;
+    }
+}
+
+/*@keyframes card{
+    0%{
+        width: ;
+    }
+    100%{}
+}*/
 
 #learn-more-btn {
     background: var(--color1);
@@ -550,4 +566,19 @@ form .membership-options input[type="radio"] {
 
 ::backdrop{
     background-color:#f2bf786c;
+}
+
+.membership-info{
+    text-align: center;
+    width: 200px;
+    background-color: var(--color2);
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 20px 3px rgba(0, 0, 0, 0.2);
+}
+
+.membership-info h3 {
+    text-decoration: underline;
 }
