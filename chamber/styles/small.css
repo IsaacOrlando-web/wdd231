@@ -554,8 +554,8 @@ form .membership-options input[type="radio"] {
     100%{}
 }*/
 
-#learn-more-btn {
-    background: var(--color1);
+.learn-more-btn {
+   background: #6a1a00;   /* Naranja-marrón muy oscuro para AAA */
     color: #fff;
     border: none;
     border-radius: 8px;
