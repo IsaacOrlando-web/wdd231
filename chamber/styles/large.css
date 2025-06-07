@@ -24,11 +24,22 @@
     footer{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .footer-title{
+        margin-top: 2px;
     }
 
     footer li{
         font-size: 15px;
+    }
+
+    .social-media
+    {
+        margin-top: 1px;
+        margin-bottom: 2px;
     }
 
     .members-container{
@@ -47,15 +58,21 @@
 
     .place{
         max-width: 100%;
-        width: 80%;
+        width: 20rem;
+        height: 30rem;
         box-sizing: border-box;
         margin: auto;
         margin-bottom: 20px;
     }
 
+    .place h2{
+        margin-top: 0;
+    }
+
     .place img{
         width: 100%;
         height: auto;
+        margin-bottom: 1rem;
     }
 }
 
@@ -70,6 +87,9 @@
             "image address"
             "image description"
             "image button";
+        width: 35rem;
+        height: 20rem;
+        padding: 10px;
     }
 
     .place img:hover{
@@ -142,6 +162,17 @@
 
 @media only screen and (min-width: 950px){
 
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+    }
+    
+    .social-media-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     header img {
         width: 9em;
@@ -216,9 +247,14 @@
     }
     
     footer{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        height: 5rem;
+    }
+
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     footer li{

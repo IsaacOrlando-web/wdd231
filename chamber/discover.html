@@ -21,12 +21,22 @@
 
 <!--Scripts-->
     <script src="scripts/script.js" defer></script>
-    
+    <script src="scripts/places.js" type="module"></script>
 </head>
 <body>
     <header>
-        <img  src="images/coyhaiquelogoqhite.webp" alt="logo Coyhaique Chamber of Commerce">
-        <button id="myButton"></button>
+        <div class="logo-container">
+        <img src="images/coyhaiquelogoqhite.webp" 
+             alt="logo Coyhaique Chamber of Commerce" 
+             width="144" 
+             height="144"
+             loading="eager"
+             style="aspect-ratio: 1/1; width: 5em; height: auto;">
+    </div>
+    <button id="myButton" aria-label="Menu" 
+            style="width: 44px; height: 44px;">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
     </header>
     <nav id="animateme">
         <ul class="menuLinks">
@@ -43,37 +53,40 @@
         <div id="places">
 
         </div>
+        <p class="sidebar"></p>
     </main>
     <footer>
-        <ul>
+    <div class="footer-content">
+        <ul class="contact-info">
             <li><span class="footer-title">Coyhaique Chamber of Commerce</span></li>
             <li>Oficina: +56 67 2123 456</li>
             <li>Móvil/WhatsApp: +56 9 8765 4321</li>
             <li>contacto@camaracoyhaique.cl</li>
         </ul>
-        <ul class="social-media">
-            <li>
-                <a href="https://www.facebook.com/camaracoyhaique" target="_blank">
-                    <img class="social-media-img" src="images/facebook.svg" alt="Facebook">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/camaracoyhaique/" target="_blank">
-                    <img class="social-media-img" src="images/instagram.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/company/camaracoyhaique/" target="_blank">
-                    <img class="social-media-img" src="images/linkedin.svg" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li>Copyright &copy; <span id="CurrentYear"></span> Isaac Maldonado Soto</li>
-            <li>Last Modification: <span id="lastModification"></span></li>
-        </ul>
-        
-    </footer>
-    <script src="scripts/places.js" type="module"></script>
+        <div class="social-media-wrapper">
+            <ul class="social-media">
+                <li>
+                    <a href="" target="_blank" rel="noopener">
+                        <img class="social-media-img" src="images/facebook.svg" alt="Facebook" width="32" height="32" loading="lazy">
+                    </a>
+                    <a href="" target="_blank" rel="noopener">
+                        <img class="social-media-img" src="images/instagram.svg" alt="Instagram" width="32" height="32" loading="lazy">
+                    </a>
+                    <a href="" target="_blank" rel="noopener">
+                        <img class="social-media-img" src="images/linkedin.svg" alt="LinkedIN" width="32" height="32" loading="lazy">
+                    </a>
+                </li>
+                <!-- Repeat for other social icons -->
+            </ul>
+        </div>
+        <div class="footer-meta">
+            <ul>
+                <li>Copyright &copy; <span id="CurrentYear"></span> Isaac Maldonado Soto</li>
+                <li>Last Modification: <span id="lastModification"></span></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    
 </body>
 </html>
