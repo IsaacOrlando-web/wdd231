@@ -21,30 +21,30 @@ export const places = [
       "name": "Río Simpson & Puente Colgante",
       "address": "Along Ruta 240, 10 km south of Coyhaique",
       "description": "A turquoise river flanked by steep cliffs, with a historic suspension bridge (built in 1926). Famous for fly-fishing and scenic photography.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Puente_Colgante_R%C3%ADo_Simpson.jpg/800px-Puente_Colgante_R%C3%ADo_Simpson.jpg"
+      "image_url": "../images/places-imgs/rioSimpson.webp"
     },
     {
       "name": "Cerro McKay",
       "address": "Trail starts at Camino a Cerro McKay, 3 km east of Coyhaique",
       "description": "A moderate 2-hour hike to a summit with 360° views of Coyhaique, Río Simpson, and the Andes. Best at sunrise/sunset.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Coyhaique_from_Cerro_McKay.jpg/800px-Coyhaique_from_Cerro_McKay.jpg"
+      "image_url": "../images/places-imgs/cerroMckay.webp"
     },
     {
       "name": "Casa del Turista Rural (Rural Tourist Market)",
       "address": "General Parra 365, Coyhaique",
       "description": "A cozy market selling Patagonian wool crafts, smoked meats, jams, and honey. Supports local artisans and rural producers.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Casa_del_Turista_Rural_Coyhaique.jpg/800px-Casa_del_Turista_Rural_Coyhaique.jpg"
+      "image_url": "../images/places-imgs/casaTurista.webp"
     },
     {
       "name": "Piedra del Indio",
       "address": "Ruta 240, 15 km south of Coyhaique",
       "description": "A natural rock formation resembling an indigenous face, sculpted by wind/water erosion. A quick roadside stop with river views.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Piedra_del_Indio_Coyhaique.jpg/800px-Piedra_del_Indio_Coyhaique.jpg"
+      "image_url": "../images/places-imgs/piedraDelIndio.jpg"
     },
     {
       "name": "Feria Ganadera (Livestock Fair)",
       "address": "Sector Escuela Agrícola, Coyhaique (held annually in November)",
       "description": "A vibrant rodeo and folk festival celebrating Patagonian gaucho culture, with horseback riding, barbecues (asados), and traditional music.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Feria_Ganadera_Coyhaique.jpg/800px-Feria_Ganadera_Coyhaique.jpg"
+      "image_url": "../images/places-imgs/feriaGanadera.jpeg"
     }
 ]

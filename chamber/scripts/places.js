@@ -8,7 +8,7 @@ function getPlaces(array) {
         placeElement.innerHTML = `
             <h2>${place.name}</h2>
             <img src="${place.image_url}" alt="${place.name}">
-            <p><strong>Address:</strong> ${place.address}</p>
+            <address><strong>Address:</strong> ${place.address}</address>
             <p>${place.description}</p>
             <button>Learn More</button>
         `;
