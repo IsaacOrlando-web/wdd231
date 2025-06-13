@@ -2,6 +2,7 @@ import {santiagoPlaces} from '../data/places.mjs';
 
 // Container
 const placesContainer = document.querySelector('#places-Container'); // Make sure this matches your HTML
+let savedPlaces = []; // Array to hold saved places
 
 // Get all filter buttons
 const allPlaces = document.querySelector('#all');
@@ -26,6 +27,10 @@ function displayPlaces(filteredPlaces = santiagoPlaces) {
       const placeCard = document.createElement('div');
       placeCard.className = 'place-card';
       placeCard.dataset.categories = place.category.join(' ');
+      const isSaved = savedPlaces.some(saved => saved.name === place.name);
+      const buttonHTML = isSaved
+      ? '<button id="removeButton" class="saveButton"><span>X</span></button>'
+      : '<button id="savedButton" class="saveButton"><img src="images/save.svg"></button>';
 
       placeCard.innerHTML = `
         <div class="place-image" style="background-image: url('${place.image}')"></div>
@@ -39,8 +44,8 @@ function displayPlaces(filteredPlaces = santiagoPlaces) {
           <div class="categories">✅<strong>Categories:</strong>
             ${place.category.map(cat => `<span class="category-tag">${cat}</span>`).join(' ')}
           </div>
-          <button id="savedButton" class="saveButton"><img src="images/save.svg"></button>
         </div>
+        ${buttonHTML}
       `;
 
       placesContainer.appendChild(placeCard);
@@ -51,6 +56,55 @@ function displayPlaces(filteredPlaces = santiagoPlaces) {
   }
 }
 
+console.log(santiagoPlaces);
+placesContainer.addEventListener('click', function(event) {
+  const saveBtn = event.target.closest('#savedButton');
+  const removeBtn = event.target.closest('#removeButton');
+  const card = event.target.closest('.place-card');
+
+  if (saveBtn && !removeBtn && card) {
+    // Guardar frase
+    const place = card.querySelector('h3')?.textContent;
+    if (!savedPlaces.some(saved => saved.place === place)) {
+      // ...extrae info y guarda...
+            if (saveBtn && !removeBtn && card) {
+        // Guardar lugar completo
+        const placeName = card.querySelector('h3')?.textContent;
+        // Busca el objeto completo en santiagoPlaces
+        const placeObj = santiagoPlaces.find(p => p.name === placeName);
+        if (placeObj && !savedPlaces.some(saved => saved.name === placeObj.name)) {
+          savedPlaces.push({ ...placeObj }); // Guarda toda la info del lugar
+          displayPlaces(); // <-- Vuelve a renderizar
+
+          // Save into localStorage
+          try{
+            localStorage.setItem('savedPlaces', JSON.stringify(savedPlaces));
+            const localContent = localStorage.getItem('savedPlaces');
+            console.log('lugares guardadas actualizadas:', localContent);
+          } catch (error) {
+            console.error('Error al guardar en localStorage:', error);
+          }
+        }
+      }
+      displayPlaces(); // <-- Vuelve a renderizar
+    }
+  }
+    if (removeBtn && card) {
+      // Eliminar lugar completo
+      const place = card.querySelector('h3')?.textContent;
+      savedPlaces = savedPlaces.filter(saved => saved.name !== place);
+      displayPlaces(); // <-- Vuelve a renderizar
+      // Save into localStorage
+      try{
+        localStorage.setItem('savedPlaces', JSON.stringify(savedPlaces));
+        const localContent = localStorage.getItem('savedPlaces');
+        console.log('lugares guardadas actualizadas:', localContent);
+      } catch (error) {
+        console.error('Error al guardar en localStorage:', error);
+      }
+  }
+  console.log(savedPlaces);
+});
 // Filter places by category
 function filterPlaces(category) {
   try {

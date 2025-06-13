@@ -2,6 +2,8 @@ import { phrases } from '../data/wordsPhrases.mjs';
 
 // Container
 const phrasesContainer = document.querySelector('#sentences-Container'); // Fixed selector (added #)
+//Array to hace the saved phrases
+let savedPhrases = [];
 
 // Get all filter buttons
 const all = document.querySelector('#all');
@@ -25,6 +27,10 @@ function displayPhrases(filteredPhrases = phrases) {
     const phraseCard = document.createElement('div');
     phraseCard.className = 'phrase-card';
     phraseCard.dataset.categories = phrase.usage.join(' ');
+    const isSaved = savedPhrases.some(saved => saved.phrase === phrase.phrase);
+    const buttonHTML = isSaved
+      ? '<button id="removeButton" class="saveButton"><span>X</span></button>'
+      : '<button id="savedButton" class="saveButton"><img src="images/save.svg"></button>';
     
     phraseCard.innerHTML = `
       <div class="phrase-header">
@@ -37,12 +43,54 @@ function displayPhrases(filteredPhrases = phrases) {
       <div class="categories">
         ${phrase.usage.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
       </div>
-      <button id="savedButton" class="saveButton"><img src="images/save.svg"></button>
+      ${buttonHTML}
     `;
     
     phrasesContainer.appendChild(phraseCard);
   });
 }
+
+console.log(phrases);
+phrasesContainer.addEventListener('click', function(event) {
+  const saveBtn = event.target.closest('#savedButton');
+  const removeBtn = event.target.closest('#removeButton');
+  const card = event.target.closest('.phrase-card');
+
+  if (saveBtn && !removeBtn && card) {
+    // Guardar frase
+    const phraseText = card.querySelector('h3')?.textContent;
+    // Busca el objeto completo en phrases
+    const phraseObj = phrases.find(p => p.phrase === phraseText);
+    if (phraseObj && !savedPhrases.some(saved => saved.phrase === phraseObj.phrase)) {
+      savedPhrases.push({ ...phraseObj }); // Guarda toda la info de la frase
+      displayPhrases(); // Vuelve a renderizar
+
+      //save into a localStorage
+      try{
+        localStorage.setItem('savedPhrases', JSON.stringify(savedPhrases));
+        const localContent = localStorage.getItem('savedPhrases');
+        console.log('Frases guardadas actualizadas:', localContent);
+      } catch (error) {
+        console.error('Error al guardar en localStorage:', error);
+      }
+      
+    }
+  }
+  if (removeBtn && card) {
+    // Eliminar frase completa
+    const phraseText = card.querySelector('h3')?.textContent;
+    savedPhrases = savedPhrases.filter(saved => saved.phrase !== phraseText);
+    displayPhrases(); // Vuelve a renderizar
+
+    // upload localStorage
+    localStorage.setItem('savedPhrases', JSON.stringify(savedPhrases));
+
+    const localContent = localStorage.getItem('savedPhrases');
+    console.log('Frases guardadas actualizadas:', localContent);
+  }
+  console.log(savedPhrases);
+});
+
 
 // Filter phrases by category
 function filterPhrases(category) {

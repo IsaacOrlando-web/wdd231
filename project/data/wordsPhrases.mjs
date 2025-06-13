@@ -183,7 +183,7 @@ export const phrases = [
       "meaning": "Do you understand? (with Chilean emphasis)",
       "usage": ["social", "young"],
       "frequency": "veryCommon",
-      "example": "Así no se hace, ¿cachai po? → That's not how it's done, you know?"
+      "example": "Así no se hace, ¿cachai po? → That's not how it's done, you know?",
     },
     {
       "phrase": "Estar pato",
