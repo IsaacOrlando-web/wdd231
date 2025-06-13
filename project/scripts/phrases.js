@@ -37,6 +37,7 @@ function displayPhrases(filteredPhrases = phrases) {
       <div class="categories">
         ${phrase.usage.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
       </div>
+      <button id="savedButton" class="saveButton"><img src="images/save.svg"></button>
     `;
     
     phrasesContainer.appendChild(phraseCard);

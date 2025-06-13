@@ -181,6 +181,7 @@ section h2{
     transition: transform 0.3s ease;
     text-align: center;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative
 }
 
 .place-card img {
@@ -369,4 +370,26 @@ section h2{
     margin-right: 0.5rem;
     font-family: var(--secondary-font-family);
     font-weight: bold;
+}
+
+.saveButton {
+    background-color: var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.saveButton img{
+    width: 1rem;
+    vertical-align: middle;
+    margin-right: 100px;
 }
