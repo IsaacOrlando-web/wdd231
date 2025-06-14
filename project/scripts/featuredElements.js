@@ -15,7 +15,7 @@ function createPhraseCards() {
             <h3>${phrase.phrase}</h3>
             <p><strong>Frequency:</strong> ${phrase.frequency}</p>
             <p><strong>Meaning:</strong> ${phrase.meaning}</p>
-            <button id="card-button">Learn More</button>
+            <button class="card-button" id="card-button-phrase">Learn More</button>
         `;
         phrasesContainer.appendChild(card);
     });
@@ -31,12 +31,31 @@ function createPlaceCards() {
             <p><strong>Description:</strong> ${place.description}</p>
             <p><strong>Location:</strong> ${place.location}</p>
             <p><strong>Category:</strong> ${place.category.join(', ')}</p>
-            <button id="card-button">Learn More</button>
+            <button class="card-button" id="card-button-place">Learn More</button>
         `;
         placesContainer.appendChild(card);
+    });
+} 
+function addPhraseButtonListeners() {
+    const buttons = document.querySelectorAll('#featured-Phrases .card-button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            window.location.href = 'sentences.html';
+        });
+    });
+}
+
+function addPlaceButtonListeners() {
+    const buttons = document.querySelectorAll('#featured-Places .card-button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            window.location.href = 'places.html';
+        });
     });
 }
 
 // Call the function to create cards
 createPhraseCards();
 createPlaceCards();
+addPlaceButtonListeners();
+addPhraseButtonListeners();

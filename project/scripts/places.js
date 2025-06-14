@@ -4,6 +4,16 @@ import {santiagoPlaces} from '../data/places.mjs';
 const placesContainer = document.querySelector('#places-Container'); // Make sure this matches your HTML
 let savedPlaces = []; // Array to hold saved places
 
+const savedFromStorage = localStorage.getItem('savedPlaces');
+// Check if there are saved places in localStorage
+if (savedFromStorage) {
+  try {
+    savedPlaces = JSON.parse(savedFromStorage);
+  } catch (e) {
+    savedPlaces = [];
+  }
+}
+
 // Get all filter buttons
 const allPlaces = document.querySelector('#all');
 const history = document.querySelector('#history');

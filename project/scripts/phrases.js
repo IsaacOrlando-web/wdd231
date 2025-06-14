@@ -4,6 +4,14 @@ import { phrases } from '../data/wordsPhrases.mjs';
 const phrasesContainer = document.querySelector('#sentences-Container'); // Fixed selector (added #)
 //Array to hace the saved phrases
 let savedPhrases = [];
+const savedFromStorage = localStorage.getItem('savedPhrases');
+if (savedFromStorage) {
+  try {
+    savedPhrases = JSON.parse(savedFromStorage);
+  } catch (e) {
+    savedPhrases = [];
+  }
+}
 
 // Get all filter buttons
 const all = document.querySelector('#all');
@@ -184,6 +192,8 @@ function init() {
   displayPhrases();
   setupButtonHandlers();
 }
+
+console.log('Phrases saved from phrases.js:', savedPhrases);
 
 // Start the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
