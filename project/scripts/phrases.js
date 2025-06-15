@@ -92,9 +92,6 @@ phrasesContainer.addEventListener('click', function(event) {
 
     // upload localStorage
     localStorage.setItem('savedPhrases', JSON.stringify(savedPhrases));
-
-    const localContent = localStorage.getItem('savedPhrases');
-    console.log('Frases guardadas actualizadas:', localContent);
   }
   console.log(savedPhrases);
 });

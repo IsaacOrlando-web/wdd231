@@ -620,3 +620,10 @@ section h2{
     text-align: center;
 }
 
+.youtube-link{
+    display: inline-block;
+    align-self: center;
+    margin-top: 1rem;
+    color: white;
+    font-weight: bold;
+}
