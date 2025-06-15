@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChileReady | Sentences</title>
+    <title>ChileReady | Home</title>
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/script.js" defer></script>
@@ -28,25 +28,59 @@
         </ul>
     </nav>
 
-    <div id="buttonsContainer">
-        <button class="filter-btn active" id="all">All Phrases</button>
-        <button class="filter-btn" id="social">Social</button>
-        <button class="filter-btn" id="negative">Negative</button>
-        <button class="filter-btn" id="young">Youth</button>
-        <button class="filter-btn" id="money">Money</button>
-        <button class="filter-btn" id="food">Food</button>
-        <button class="filter-btn" id="work">Work</button>
-        <button class="filter-btn" id="family">Family</button>
-        <button class="filter-btn" id="drinking">Drinking</button>
-        <button class="filter-btn" id="positive">Positive</button>
-        <button class="filter-btn" id="transport">Transport</button>
-        <button class="filter-btn" id="slang">Slang</button>
-    </div>
+    <main class="form-container">
+        <h1>Join Our Community</h1>
+        <p class="form-subtitle">Become part of ChileReady and access exclusive content</p>
+        
+        <form id="joinForm" class="membership-form" action="thanks.html" method="get">
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Additional Information</h2>
+                <div class="form-group">
+                    <label for="interests">What are you most interested in?</label>
+                    <select id="interests" name="interests">
+                        <option value="">Select an option</option>
+                        <option value="language">Learning Spanish</option>
+                        <option value="travel">Travel Planning</option>
+                        <option value="culture">Chilean Culture</option>
+                        <option value="all">All of the above</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Comments or Questions</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Join Now</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+    </main>
 
-    <section class="sentences-section">
-        <h2>Sentences</h2>
-        <div id="sentences-Container"></div>
-    </section>
     
     <footer class="site-footer">
     <div class="footer-container">
