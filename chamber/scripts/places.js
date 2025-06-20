@@ -15,7 +15,6 @@ function getPlaces(array) {
             style="aspect-ratio: 600/400; width: 100%; height: auto;">
             <address><strong>Address:</strong> ${place.address}</address>
             <p>${place.description}</p>
-            <button>Learn More</button>
         `;
 
         document.getElementById('places').appendChild(placeElement);
