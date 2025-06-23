@@ -30,7 +30,7 @@ function mostrarPokemon(poke){
         : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/500px-Pokebola-pokeball-png-0.png";
 
     div.innerHTML = `
-        <p class="pokemon-id-back">#025</p>
+        <p class="pokemon-id-back">#${pokeId}</p>
         <div class="pokemon-imagen">
             <img src="${imagen}" alt="Pokemon" loading="lazy">
         </div>
